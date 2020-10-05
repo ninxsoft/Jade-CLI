@@ -17,7 +17,7 @@ class Functions {
 
         Options:
           -h, --help\t\tDisplay help / this usage message
-          -v, --version\t\tDisplay \(String.appName)'s version
+          -v, --version\t\tDisplay the version of \(String.appName)
           -c, --credentials\tInteractively add / update username
           \t\t\tand password credentials to keychain
           -l, --list\t\tList all assets available to download
