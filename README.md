@@ -41,7 +41,7 @@ Usage: jade [-h] | [-v] | [-c] | [-l] | [-d] [-t] [-r] [-p] [-o]
 
 Options:
   -h, --help           Display help / this usage message
-  -v, --version        Display jade's version
+  -v, --version        Display the version of jade
   -c, --credentials    Interactively add / update username
                        and password credentials to keychain
   -l, --list           List all assets available to download
