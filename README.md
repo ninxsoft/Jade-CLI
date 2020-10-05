@@ -1,13 +1,14 @@
 
-# JADE
+# JADE - Jamf Asset Downloader Extreme
 
-Jamf Asset Downloader Extreme, a friendly Mac command-line tool to automate the downloading of your [Jamf Nation](https://www.jamf.com/jamf-nation/) assets:
+A friendly Mac command-line tool to automate the downloading of your [Jamf Nation](https://www.jamf.com/jamf-nation/) assets:
 
 ![Example](Readme%20Resources/Example.png)
 
 ## Features
 
 *   [x] List all available Jamf assets for download
+
     **Note:** Availability based upon your Jamf Subscription
 
 *   [x] Download the following Jamf assets
@@ -80,10 +81,12 @@ Download Options:
 # Add username and password to keychain
 jade --credentials
 
-# List all available Jamf Assets (will vary depending on your Jamf subscription)
+# List all available Jamf Assets
+# (will vary depending on your Jamf subscription)
 jade --list
 
-# Download the default asset (Jamf Pro Installer, latest version, Mac)
+# Download the default asset
+# (Jamf Pro Installer, latest version, Mac)
 jade --download
 
 # Download the latest version of Jamf Connect
@@ -95,7 +98,8 @@ jade --download --type jamf --release 10.0.0
 # Download the latest Jamf Pro Installer for Linux
 jade --download --type jamf --platform linux
 
-# Download a particular release version of the Jamf Pro Server Tools for Windows to a custom directory
+# Download a particular release version of the Jamf Pro Server Tools
+# for Windows, to a custom directory
 jade --download --type jpst --release 2.7.3 --platform windows --output ~/Desktop
 ```
 
