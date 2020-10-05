@@ -1,7 +1,7 @@
 
 # JADE - Jamf Asset Downloader Extreme
 
-A friendly Mac command-line tool to automate the downloading of your [Jamf Nation](https://www.jamf.com/jamf-nation/) assets:
+A Mac command-line tool to automate the downloading of your [Jamf Nation](https://www.jamf.com/jamf-nation/) assets:
 
 ![Example](Readme%20Resources/Example.png)
 
