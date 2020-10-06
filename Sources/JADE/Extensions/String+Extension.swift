@@ -30,7 +30,7 @@ extension String {
     }
 
     static let appName: String = "jade"
-    static let appVersion: String = "1.0"
+    static let appVersion: String = "1.1"
     static var identifier: String { "com.ninxsoft.\(appName)" }
     static let cookieName: String = "JSESSIONID"
     static let loginURL: String = "https://www.jamf.com/jamf-nation/api/v1/session/login"

@@ -18,6 +18,7 @@ struct Asset {
         case sccm = "SCCM_PLUGIN"
         case connect = "CONNECT"
         case composer = "COMPOSER"
+        case health = "HEALTHCARE_LISTENER"
         case all = "ALL"
 
         var description: String {
@@ -38,6 +39,8 @@ struct Asset {
                 return "connect"
             case .composer:
                 return "composer"
+            case .health:
+                return "health"
             default:
                 return ""
             }
@@ -61,6 +64,8 @@ struct Asset {
                 return "Jamf Connect"
             case .composer:
                 return "Composer"
+            case .health:
+                return "Healthcare Listener"
             default:
                 return ""
             }
@@ -101,6 +106,8 @@ struct Asset {
                 self = .connect
             case "composer":
                 self = .composer
+            case "health":
+                self = .health
             default:
                 return nil
             }

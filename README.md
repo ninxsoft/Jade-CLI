@@ -20,6 +20,7 @@ A Mac command-line tool to automate the downloading of your [Jamf Nation](https:
     *   Jamf SCCM Plugin
     *   Jamf Connect
     *   Composer
+    *   Healthcare Listener
 
     **Note:** Availability based upon your Jamf Subscription
 *   [x] Download Jamf assets for the following platforms (where applicable):
@@ -48,7 +49,7 @@ Options:
   -d, --download       Download an asset from Jamf Nation
 
 Download Options:
-  -t, --type           Download types:
+  -t, --type           Download types (depending on availability):
                        jamf (Jamf Pro Installer)
                        adcs (Jamf AD CS Connector)
                        jim (Jamf Infrastructure Manager)
@@ -57,12 +58,13 @@ Download Options:
                        sccm (Jamf SCCM Plugin)
                        connect (Jamf Connect)
                        composer (Composer)
+                       health (Healthcare Listener)
                        Default: jamf
 
   -r, --release        Release version
                        Default: latest
 
-  -p, --platform       Download platforms:
+  -p, --platform       Download platforms (depending on availability):
                        mac (Mac binaries and DMGs)
                        windows (Windows binaries and MSIs)
                        linux (Linux binaries and .run files)
@@ -116,8 +118,13 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 
 *   Project created and maintained by Nindi Gill ([ninxsoft](https://github.com/ninxsoft)).
 *   Kishikawa Katsumi ([kishikawakatsumi](https://github.com/kishikawakatsumi)) for [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess), used to read and update keychain credentials.
+*   Eric Boyd ([@ericjboyd](https://twitter.com/ericjboyd)) for assistance with adding Healthcare Listener.
 
 ## Version History
+
+*   1.1
+    *   Added support for Healthcare Listener
+    *   Minor tweaks to text formatting
 
 *   1.0
     *   Initial release

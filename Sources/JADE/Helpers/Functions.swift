@@ -24,7 +24,7 @@ class Functions {
           -d, --download\tDownload an asset from Jamf Nation
 
         Download Options:
-          -t, --type\t\tDownload types:
+          -t, --type\t\tDownload types (depending on availability):
           \t\t\tjamf (Jamf Pro Installer)
           \t\t\tadcs (Jamf AD CS Connector)
           \t\t\tjim (Jamf Infrastructure Manager)
@@ -33,12 +33,13 @@ class Functions {
           \t\t\tsccm (Jamf SCCM Plugin)
           \t\t\tconnect (Jamf Connect)
           \t\t\tcomposer (Composer)
+          \t\t\thealth (Healthcare Listener)
           \t\t\tDefault: jamf
 
           -r, --release\t\tRelease version
           \t\t\tDefault: latest
 
-          -p, --platform\tDownload platforms:
+          -p, --platform\tDownload platforms (depending on availability):
           \t\t\tmac (Mac binaries and DMGs)
           \t\t\twindows (Windows binaries and MSIs)
           \t\t\tlinux (Linux binaries and .run files)
