@@ -44,7 +44,7 @@ class Functions {
           \t\t\tlinux (Linux binaries and .run files)
           \t\t\tmanual (Manual archives)
           \t\t\tredhat (RedHat RPM installers)
-          \t\t\tubuntu: (Ubuntu DEB installers)
+          \t\t\tubuntu (Ubuntu DEB installers)
           \t\t\tDefault: mac
 
           -o, --output\t\tOutput directory

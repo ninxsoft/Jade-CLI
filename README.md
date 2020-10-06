@@ -68,7 +68,7 @@ Download Options:
                        linux (Linux binaries and .run files)
                        manual (Manual archives)
                        redhat (RedHat RPM installers)
-                       ubuntu: (Ubuntu DEB installers)
+                       ubuntu (Ubuntu DEB installers)
                        Default: mac
 
   -o, --output         Output directory
