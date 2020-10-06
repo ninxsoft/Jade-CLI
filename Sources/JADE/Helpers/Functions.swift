@@ -66,10 +66,10 @@ class Functions {
 
         while username.isEmpty {
 
-            print("Enter your Jamf Nation username: ", terminator: "")
+            print("Enter your Jamf Nation Email Address or Username: ", terminator: "")
 
             guard let string: String = readLine(strippingNewline: true) else {
-                print("\nERROR: There was an error entering your username")
+                print("\nERROR: There was an error entering your Email Address or Username")
                 exit(1)
             }
 
@@ -80,8 +80,8 @@ class Functions {
 
         while password.isEmpty {
 
-            guard let string: UnsafeMutablePointer<Int8> = getpass("Enter your Jamf Nation password: ") else {
-                print("\nERROR: There was an error entering your password")
+            guard let string: UnsafeMutablePointer<Int8> = getpass("Enter your Jamf Nation Password: ") else {
+                print("\nERROR: There was an error entering your Password")
                 exit(1)
             }
 
