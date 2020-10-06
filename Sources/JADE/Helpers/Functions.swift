@@ -25,26 +25,26 @@ class Functions {
 
         Download Options:
           -t, --type\t\tDownload types:
-          \t\t\t- jamf (Jamf Pro Installer)
-          \t\t\t- adcs (Jamf AD CS Connector)
-          \t\t\t- jim (Jamf Infrastructure Manager)
-          \t\t\t- jpp (Jamf PKI Proxy)
-          \t\t\t- jpst (Jamf Pro Server Tools)
-          \t\t\t- sccm (Jamf SCCM Plugin)
-          \t\t\t- connect (Jamf Connect)
-          \t\t\t- composer (Composer)
+          \t\t\tjamf (Jamf Pro Installer)
+          \t\t\tadcs (Jamf AD CS Connector)
+          \t\t\tjim (Jamf Infrastructure Manager)
+          \t\t\tjpp (Jamf PKI Proxy)
+          \t\t\tjpst (Jamf Pro Server Tools)
+          \t\t\tsccm (Jamf SCCM Plugin)
+          \t\t\tconnect (Jamf Connect)
+          \t\t\tcomposer (Composer)
           \t\t\tDefault: jamf
 
           -r, --release\t\tRelease version
           \t\t\tDefault: latest
 
           -p, --platform\tDownload platforms:
-          \t\t\t- mac (Mac binaries and DMGs)
-          \t\t\t- windows (Windows binaries and MSIs)
-          \t\t\t- linux (Linux binaries and .run files)
-          \t\t\t- manual (Manual archives)
-          \t\t\t- redhat (RedHat RPM installers)
-          \t\t\t- ubuntu: (Ubuntu DEB installers)
+          \t\t\tmac (Mac binaries and DMGs)
+          \t\t\twindows (Windows binaries and MSIs)
+          \t\t\tlinux (Linux binaries and .run files)
+          \t\t\tmanual (Manual archives)
+          \t\t\tredhat (RedHat RPM installers)
+          \t\t\tubuntu: (Ubuntu DEB installers)
           \t\t\tDefault: mac
 
           -o, --output\t\tOutput directory

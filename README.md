@@ -49,26 +49,26 @@ Options:
 
 Download Options:
   -t, --type           Download types:
-                       - jamf (Jamf Pro Installer)
-                       - adcs (Jamf AD CS Connector)
-                       - jim (Jamf Infrastructure Manager)
-                       - jpp (Jamf PKI Proxy)
-                       - jpst (Jamf Pro Server Tools)
-                       - sccm (Jamf SCCM Plugin)
-                       - connect (Jamf Connect)
-                       - composer (Composer)
+                       jamf (Jamf Pro Installer)
+                       adcs (Jamf AD CS Connector)
+                       jim (Jamf Infrastructure Manager)
+                       jpp (Jamf PKI Proxy)
+                       jpst (Jamf Pro Server Tools)
+                       sccm (Jamf SCCM Plugin)
+                       connect (Jamf Connect)
+                       composer (Composer)
                        Default: jamf
 
   -r, --release        Release version
                        Default: latest
 
   -p, --platform       Download platforms:
-                       - mac (Mac binaries and DMGs)
-                       - windows (Windows binaries and MSIs)
-                       - linux (Linux binaries and .run files)
-                       - manual (Manual archives)
-                       - redhat (RedHat RPM installers)
-                       - ubuntu: (Ubuntu DEB installers)
+                       mac (Mac binaries and DMGs)
+                       windows (Windows binaries and MSIs)
+                       linux (Linux binaries and .run files)
+                       manual (Manual archives)
+                       redhat (RedHat RPM installers)
+                       ubuntu: (Ubuntu DEB installers)
                        Default: mac
 
   -o, --output         Output directory
