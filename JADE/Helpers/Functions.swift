@@ -10,49 +10,7 @@ import Foundation
 class Functions {
 
     static func help() {
-        let string: String = """
-        \(String.appName) - Jamf Asset Downloader Extreme
-
-        Usage: \(String.appName) [-h] | [-v] | [-c] | [-l] | [-d] [-t] [-r] [-p] [-o]
-
-        Options:
-          -h, --help\t\tDisplay help / this usage message
-          -v, --version\t\tDisplay the version of \(String.appName)
-          -c, --credentials\tInteractively add / update username
-          \t\t\tand password credentials to keychain
-          -l, --list\t\tList all assets available to download
-          -d, --download\tDownload an asset from Jamf Nation
-
-        Download Options:
-          -t, --type\t\tDownload types (depending on availability):
-          \t\t\tjamf (Jamf Pro Installer)
-          \t\t\tadcs (Jamf AD CS Connector)
-          \t\t\tjim (Jamf Infrastructure Manager)
-          \t\t\tjpp (Jamf PKI Proxy)
-          \t\t\tjpst (Jamf Pro Server Tools)
-          \t\t\tsccm (Jamf SCCM Plugin)
-          \t\t\tconnect (Jamf Connect)
-          \t\t\tcomposer (Composer)
-          \t\t\thealth (Healthcare Listener)
-          \t\t\tDefault: jamf
-
-          -r, --release\t\tRelease version
-          \t\t\tDefault: latest
-
-          -p, --platform\tDownload platforms (depending on availability):
-          \t\t\tmac (Mac binaries and DMGs)
-          \t\t\twindows (Windows binaries and MSIs)
-          \t\t\tlinux (Linux binaries and .run files)
-          \t\t\tmanual (Manual archives)
-          \t\t\tredhat (RedHat RPM installers)
-          \t\t\tubuntu (Ubuntu DEB installers)
-          \t\t\tDefault: mac
-
-          -o, --output\t\tOutput directory
-          \t\t\tDefault: ~/Downloads/
-
-        """
-        print(string)
+        print(String.help)
     }
 
     static func version() {
