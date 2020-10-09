@@ -11,7 +11,7 @@ A Mac command-line tool to automate the downloading of your [Jamf Nation](https:
 
     **Note:** Availability based upon your Jamf Subscription
 
-*   [x] Download the following Jamf assets
+*   [x] Download the following Jamf assets:
     *   Jamf Pro Installer
     *   Jamf AD CS Connector
     *   Jamf Infrastructure Manager
