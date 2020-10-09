@@ -166,26 +166,26 @@ class HTTP {
                     continue
                 }
 
-                var downloads: [Download] = []
+                var downloadLinks: [DownloadLink] = []
 
                 for downloadLinkDictionary in downloadLinksArray {
 
                     guard let platformString: String = downloadLinkDictionary["type"] as? String,
-                        let platform: Download.Platform = Download.Platform(rawValue: platformString),
+                        let platform: DownloadLink.Platform = DownloadLink.Platform(platform: platformString),
                         let url: String = downloadLinkDictionary["url"] as? String,
                         let checksum: String = downloadLinkDictionary["checksum"] as? String else {
                         continue
                     }
 
-                    let download: Download = Download(platform: platform, url: url, checksum: checksum)
-                    downloads.append(download)
+                    let downloadLink: DownloadLink = DownloadLink(platform: platform, url: url, checksum: checksum)
+                    downloadLinks.append(downloadLink)
                 }
 
-                guard !downloads.isEmpty else {
+                guard !downloadLinks.isEmpty else {
                     continue
                 }
 
-                let release: Release = Release(version: version, downloads: downloads)
+                let release: Release = Release(version: version, downloadLinks: downloadLinks)
                 releases.append(release)
             }
         }
@@ -209,87 +209,36 @@ class HTTP {
         for dataDictionary in dataArray {
 
             guard let typeString: String = dataDictionary["type"] as? String,
-                let type: Asset.AssetType = Asset.AssetType(rawValue: typeString),
+                let type: Asset.AssetType = Asset.AssetType(type: typeString),
                 let version: String = dataDictionary["version"] as? String,
                 let downloadsArray: [[String: Any]] = dataDictionary["downloads"] as? [[String: Any]] else {
                 continue
             }
 
-            var downloads: [Download] = []
+            var downloadLinks: [DownloadLink] = []
 
             for downloadDictionary in downloadsArray {
 
                 guard let platformString: String = downloadDictionary["type"] as? String,
-                    let platform: Download.Platform = Download.Platform(rawValue: platformString),
+                    let platform: DownloadLink.Platform = DownloadLink.Platform(rawValue: platformString),
                     let url: String = downloadDictionary["url"] as? String,
                     let checksum: String = downloadDictionary["checksum"] as? String else {
                     continue
                 }
 
-                let download: Download = Download(platform: platform, url: url, checksum: checksum)
-                downloads.append(download)
+                let downloadLink: DownloadLink = DownloadLink(platform: platform, url: url, checksum: checksum)
+                downloadLinks.append(downloadLink)
             }
 
-            guard !downloads.isEmpty else {
+            guard !downloadLinks.isEmpty else {
                 continue
             }
 
-            let release: Release = Release(version: version, downloads: downloads)
+            let release: Release = Release(version: version, downloadLinks: downloadLinks)
             let asset: Asset = Asset(type: type, releases: [release])
             assets.append(asset)
         }
 
         return assets
-    }
-
-    static func download(url string: String, checksum: String, path: String) -> Bool {
-
-        guard let url: URL = URL(string: string) else {
-            return false
-        }
-
-        var performingTask: Bool = true
-        var success: Bool = false
-        let task: URLSessionDownloadTask = URLSession.shared.downloadTask(with: url) { url, response, error in
-
-            if let error: Error = error {
-                print(error.localizedDescription)
-                performingTask = false
-                return
-            }
-
-            guard let response: URLResponse = response,
-                let httpResponse: HTTPURLResponse = response as? HTTPURLResponse,
-                httpResponse.statusCode == 200 else {
-                performingTask = false
-                return
-            }
-
-            guard let url: URL = url else {
-                performingTask = false
-                return
-            }
-
-            do {
-                if FileManager.default.fileExists(atPath: path) {
-                    try FileManager.default.removeItem(atPath: path)
-                }
-
-                try FileManager.default.copyItem(atPath: url.path, toPath: path)
-                success = true
-            } catch {
-                print(error.localizedDescription)
-            }
-
-            performingTask = false
-        }
-
-        task.resume()
-
-        while performingTask {
-            sleep(1)
-        }
-
-        return success
     }
 }

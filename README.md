@@ -36,45 +36,39 @@ A Mac command-line tool to automate the downloading of your [Jamf Nation](https:
 ## Usage
 
 ```bash
-jade - Jamf Asset Downloader Extreme
+OVERVIEW: Jamf Asset Downloader Extreme
 
-Usage: jade [-h] | [-v] | [-c] | [-l] | [-d] [-t] [-r] [-p] [-o]
+A Mac command-line tool to automate the downloading of your Jamf Nation assets.
 
-Options:
-  -h, --help           Display help / this usage message
-  -v, --version        Display the version of jade
-  -c, --credentials    Interactively add / update username
-                       and password credentials to keychain
-  -l, --list           List all assets available to download
-  -d, --download       Download an asset from Jamf Nation
+USAGE: jade [--credentials] [--list] [--download] [--type <type>] [--release <release>] [--platform <platform>] [--output <output>] [--version]
 
-Download Options:
-  -t, --type           Download types (depending on availability):
-                       jamf (Jamf Pro Installer)
-                       adcs (Jamf AD CS Connector)
-                       jim (Jamf Infrastructure Manager)
-                       jpp (Jamf PKI Proxy)
-                       jpst (Jamf Pro Server Tools)
-                       sccm (Jamf SCCM Plugin)
-                       connect (Jamf Connect)
-                       composer (Composer)
-                       health (Healthcare Listener)
-                       Default: jamf
-
-  -r, --release        Release version
-                       Default: latest
-
-  -p, --platform       Download platforms (depending on availability):
-                       mac (Mac binaries and DMGs)
-                       windows (Windows binaries and MSIs)
-                       linux (Linux binaries and .run files)
-                       manual (Manual archives)
-                       redhat (RedHat RPM installers)
-                       ubuntu (Ubuntu DEB installers)
-                       Default: mac
-
-  -o, --output         Output directory
-                       Default: ~/Downloads
+OPTIONS:
+  -c, --credentials       Interactively add / update username
+                          and password credentials to keychain.
+  -l, --list              List all assets available to download.
+  -d, --download          Download an asset from Jamf Nation.
+  -t, --type <type>       Download types (depending on availability):
+                          jamf (Jamf Pro Installer)
+                          adcs (Jamf AD CS Connector)
+                          jim (Jamf Infrastructure Manager)
+                          jpp (Jamf PKI Proxy)
+                          jpst (Jamf Pro Server Tools)
+                          sccm (Jamf SCCM Plugin)
+                          connect (Jamf Connect)
+                          composer (Composer)
+                          health (Healthcare Listener) (default: jamf)
+  -r, --release <release> Release version (default: latest)
+  -p, --platform <platform>
+                          Download platforms (depending on availability):
+                          mac (Mac binaries and DMGs)
+                          windows (Windows binaries and MSIs)
+                          linux (Linux binaries and .run files)
+                          manual (Manual archives)
+                          redhat (RedHat RPM installers)
+                          ubuntu (Ubuntu DEB installers) (default: mac)
+  -o, --output <output>   Output directory (default: ~/Downloads/)
+  -v, --version           Display the version of jade.
+  -h, --help              Show help information.
 ```
 
 ## Examples
@@ -83,12 +77,11 @@ Download Options:
 # Add username and password to keychain
 jade --credentials
 
-# List all available Jamf Assets
-# (will vary depending on your Jamf subscription)
+# List all available Jamf Assets - will vary depending on your Jamf subscription
 jade --list
 
-# Download the default asset
-# (Jamf Pro Installer, latest version, Mac)
+# Download the default asset:
+# Jamf Pro Installer, latest version, Mac
 jade --download
 
 # Download the latest version of Jamf Connect
@@ -118,9 +111,15 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 
 *   Project created and maintained by Nindi Gill ([ninxsoft](https://github.com/ninxsoft)).
 *   Kishikawa Katsumi ([kishikawakatsumi](https://github.com/kishikawakatsumi)) for [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess), used to read and update keychain credentials.
+*   Apple ([apple](https://github.com/apple)) for [Swift Argument Parser](https://github.com/apple/swift-argument-parser), used to perform command line argument and flag operations.
 *   Eric Boyd ([@ericjboyd](https://twitter.com/ericjboyd)) for assistance with adding Healthcare Listener.
 
 ## Version History
+
+*   1.1.1
+    *   Checksums are now validated
+    *   Better detection of command line arguments
+    *   Code cleanup
 
 *   1.1
     *   Added support for Healthcare Listener

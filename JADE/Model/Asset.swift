@@ -5,45 +5,25 @@
 //  Created by Nindi Gill on 3/10/20.
 //
 
+import ArgumentParser
 import Foundation
 
 struct Asset {
 
-    enum AssetType: String, CaseIterable {
-        case jamf = "JAMF_PRO"
-        case adcs = "AD_CS_CONNECTOR"
-        case jim = "INFRASTRUCTURE_MANAGER"
-        case jpp = "JAMF_PKI_PROXY"
-        case jpst = "JAMF_PRO_SERVER_TOOLS"
-        case sccm = "SCCM_PLUGIN"
-        case connect = "CONNECT"
-        case composer = "COMPOSER"
-        case health = "HEALTHCARE_LISTENER"
-        case all = "ALL"
+    enum AssetType: String, CaseIterable, ExpressibleByArgument {
+        case jamf = "jamf"
+        case adcs = "adcs"
+        case jim = "jim"
+        case jpp = "jpp"
+        case jpst = "jpst"
+        case sccm = "sccm"
+        case connect = "connect"
+        case composer = "composer"
+        case health = "health"
+        case all = ""
 
         var description: String {
-            switch self {
-            case .jamf:
-                return "jamf"
-            case .adcs:
-                return "adcs"
-            case .jim:
-                return "jim"
-            case .jpp:
-                return "jpp"
-            case .jpst:
-                return "jpst"
-            case .sccm:
-                return "sccm"
-            case .connect:
-                return "connect"
-            case .composer:
-                return "composer"
-            case .health:
-                return "health"
-            default:
-                return ""
-            }
+            self.rawValue
         }
 
         var friendlyDescription: String {
@@ -71,6 +51,31 @@ struct Asset {
             }
         }
 
+        var key: String {
+            switch self {
+            case .jamf:
+                return "JAMF_PRO"
+            case .adcs:
+                return "AD_CS_CONNECTOR"
+            case .jim:
+                return "INFRASTRUCTURE_MANAGER"
+            case .jpp:
+                return "JAMF_PKI_PROXY"
+            case .jpst:
+                return "JAMF_PRO_SERVER_TOOLS"
+            case .sccm:
+                return "SCCM_PLUGIN"
+            case .connect:
+                return "CONNECT"
+            case .composer:
+                return "COMPOSER"
+            case .health:
+                return "HEALTHCARE_LISTENER"
+            default:
+                return ""
+            }
+        }
+
         var url: String? {
             switch self {
             case .jamf:
@@ -88,72 +93,32 @@ struct Asset {
             }
         }
 
-        init?(description: String) {
-            switch description.lowercased() {
-            case "jamf":
+        init?(type: String) {
+            switch type {
+            case "JAMF_PRO":
                 self = .jamf
-            case "adcs":
+            case "AD_CS_CONNECTOR":
                 self = .adcs
-            case "jim":
+            case "INFRASTRUCTURE_MANAGER":
                 self = .jim
-            case "jpp":
+            case "JAMF_PKI_PROXY":
                 self = .jpp
-            case "jpst":
+            case "JAMF_PRO_SERVER_TOOLS":
                 self = .jpst
-            case "sccm":
+            case "SCCM_PLUGIN":
                 self = .sccm
-            case "connect":
+            case "CONNECT":
                 self = .connect
-            case "composer":
+            case "COMPOSER":
                 self = .composer
-            case "health":
+            case "HEALTHCARE_LISTENER":
                 self = .health
             default:
                 return nil
             }
         }
-
-        static var maxDescriptionLength: Int {
-
-            var max: Int = 0
-
-            for type in AssetType.allCases where type.description.count > max {
-                max = type.description.count
-            }
-
-            return max
-        }
-
-        static var maxFriendlyDescriptionLength: Int {
-
-            var max: Int = 0
-
-            for type in AssetType.allCases where type.friendlyDescription.count > max {
-                max = type.friendlyDescription.count
-            }
-
-            return max
-        }
     }
 
     let type: AssetType
     let releases: [Release]
-    var maxVersionLength: Int {
-        var max: Int = 0
-
-        for release in releases where release.version.count > max {
-            max = release.version.count
-        }
-
-        return max
-    }
-    var maxPlatformsLength: Int {
-        var max: Int = 0
-
-        for release in releases where release.platforms.count > max {
-            max = release.platforms.count
-        }
-
-        return max
-    }
 }

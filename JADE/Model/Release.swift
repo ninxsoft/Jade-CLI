@@ -9,9 +9,9 @@ import Foundation
 
 struct Release {
     let version: String
-    let downloads: [Download]
+    let downloadLinks: [DownloadLink]
     var platforms: String {
-        Array(Set(downloads.map {
+        Array(Set(downloadLinks.map {
             $0.platform.friendlyDescription
         })).sorted().joined(separator: ", ")
     }

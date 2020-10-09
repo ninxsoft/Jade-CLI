@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571A13D3252FED06007972E3 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571A13D2252FED06007972E3 /* List.swift */; };
+		571A13D6252FED48007972E3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571A13D5252FED48007972E3 /* Assets.swift */; };
+		571A13DB252FEE7D007972E3 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571A13DA252FEE7D007972E3 /* Version.swift */; };
+		571A13DF252FEF30007972E3 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571A13DE252FEF30007972E3 /* Credentials.swift */; };
+		5726A938253012340002F814 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5726A937253012340002F814 /* Data+Extension.swift */; };
 		57380E6F252F1EAA00A32C52 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E6E252F1EAA00A32C52 /* main.swift */; };
 		57380E85252F1FAE00A32C52 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 57380E84252F1FAE00A32C52 /* KeychainAccess */; };
-		57380E8A252F1FF900A32C52 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E78252F1F4100A32C52 /* Functions.swift */; };
+		57380E8A252F1FF900A32C52 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E78252F1F4100A32C52 /* Download.swift */; };
 		57380E8C252F200A00A32C52 /* Release.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7D252F1F4100A32C52 /* Release.swift */; };
-		57380E8D252F200A00A32C52 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7C252F1F4100A32C52 /* Download.swift */; };
+		57380E8D252F200A00A32C52 /* DownloadLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7C252F1F4100A32C52 /* DownloadLink.swift */; };
 		57380E8E252F200A00A32C52 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E79252F1F4100A32C52 /* HTTP.swift */; };
-		57380E8F252F200A00A32C52 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7A252F1F4100A32C52 /* Credentials.swift */; };
 		57380E90252F200A00A32C52 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7E252F1F4100A32C52 /* Asset.swift */; };
 		57380E92252F201100A32C52 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E80252F1F4100A32C52 /* String+Extension.swift */; };
+		57380EA5252FD50E00A32C52 /* Jade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380EA4252FD50E00A32C52 /* Jade.swift */; };
+		57380EA9252FD55F00A32C52 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 57380EA8252FD55F00A32C52 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,15 +37,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		571A13D2252FED06007972E3 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		571A13D5252FED48007972E3 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		571A13DA252FEE7D007972E3 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		571A13DE252FEF30007972E3 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		5726A937253012340002F814 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		57380E6B252F1EAA00A32C52 /* jade */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jade; sourceTree = BUILT_PRODUCTS_DIR; };
 		57380E6E252F1EAA00A32C52 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		57380E78252F1F4100A32C52 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		57380E78252F1F4100A32C52 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		57380E79252F1F4100A32C52 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
-		57380E7A252F1F4100A32C52 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		57380E7C252F1F4100A32C52 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		57380E7C252F1F4100A32C52 /* DownloadLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadLink.swift; sourceTree = "<group>"; };
 		57380E7D252F1F4100A32C52 /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
 		57380E7E252F1F4100A32C52 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		57380E80252F1F4100A32C52 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		57380EA4252FD50E00A32C52 /* Jade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57380EA9252FD55F00A32C52 /* ArgumentParser in Frameworks */,
 				57380E85252F1FAE00A32C52 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,10 +85,10 @@
 		57380E6D252F1EAA00A32C52 /* JADE */ = {
 			isa = PBXGroup;
 			children = (
+				57380E9F252FD47400A32C52 /* Commands */,
 				57380E7F252F1F4100A32C52 /* Extensions */,
 				57380E77252F1F4100A32C52 /* Helpers */,
 				57380E7B252F1F4100A32C52 /* Model */,
-				57380E6E252F1EAA00A32C52 /* main.swift */,
 			);
 			path = JADE;
 			sourceTree = "<group>";
@@ -84,8 +96,7 @@
 		57380E77252F1F4100A32C52 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				57380E7A252F1F4100A32C52 /* Credentials.swift */,
-				57380E78252F1F4100A32C52 /* Functions.swift */,
+				571A13D5252FED48007972E3 /* Assets.swift */,
 				57380E79252F1F4100A32C52 /* HTTP.swift */,
 			);
 			path = Helpers;
@@ -96,7 +107,7 @@
 			children = (
 				57380E7E252F1F4100A32C52 /* Asset.swift */,
 				57380E7D252F1F4100A32C52 /* Release.swift */,
-				57380E7C252F1F4100A32C52 /* Download.swift */,
+				57380E7C252F1F4100A32C52 /* DownloadLink.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,9 +115,23 @@
 		57380E7F252F1F4100A32C52 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5726A937253012340002F814 /* Data+Extension.swift */,
 				57380E80252F1F4100A32C52 /* String+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		57380E9F252FD47400A32C52 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				57380E6E252F1EAA00A32C52 /* main.swift */,
+				57380EA4252FD50E00A32C52 /* Jade.swift */,
+				571A13DE252FEF30007972E3 /* Credentials.swift */,
+				571A13D2252FED06007972E3 /* List.swift */,
+				57380E78252F1F4100A32C52 /* Download.swift */,
+				571A13DA252FEE7D007972E3 /* Version.swift */,
+			);
+			path = Commands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +153,7 @@
 			name = jade;
 			packageProductDependencies = (
 				57380E84252F1FAE00A32C52 /* KeychainAccess */,
+				57380EA8252FD55F00A32C52 /* ArgumentParser */,
 			);
 			productName = JADE;
 			productReference = 57380E6B252F1EAA00A32C52 /* jade */;
@@ -158,6 +184,7 @@
 			mainGroup = 57380E62252F1EAA00A32C52;
 			packageReferences = (
 				57380E83252F1FAE00A32C52 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				57380EA7252FD55F00A32C52 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 57380E6C252F1EAA00A32C52 /* Products */;
 			projectDirPath = "";
@@ -194,14 +221,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5726A938253012340002F814 /* Data+Extension.swift in Sources */,
 				57380E92252F201100A32C52 /* String+Extension.swift in Sources */,
-				57380E8F252F200A00A32C52 /* Credentials.swift in Sources */,
+				571A13D6252FED48007972E3 /* Assets.swift in Sources */,
+				57380EA5252FD50E00A32C52 /* Jade.swift in Sources */,
+				571A13DF252FEF30007972E3 /* Credentials.swift in Sources */,
+				571A13D3252FED06007972E3 /* List.swift in Sources */,
 				57380E90252F200A00A32C52 /* Asset.swift in Sources */,
 				57380E8E252F200A00A32C52 /* HTTP.swift in Sources */,
 				57380E6F252F1EAA00A32C52 /* main.swift in Sources */,
-				57380E8D252F200A00A32C52 /* Download.swift in Sources */,
+				57380E8D252F200A00A32C52 /* DownloadLink.swift in Sources */,
 				57380E8C252F200A00A32C52 /* Release.swift in Sources */,
-				57380E8A252F1FF900A32C52 /* Functions.swift in Sources */,
+				571A13DB252FEE7D007972E3 /* Version.swift in Sources */,
+				57380E8A252F1FF900A32C52 /* Download.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +409,14 @@
 				minimumVersion = 4.2.1;
 			};
 		};
+		57380EA7252FD55F00A32C52 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -384,6 +424,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 57380E83252F1FAE00A32C52 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		57380EA8252FD55F00A32C52 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57380EA7252FD55F00A32C52 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
