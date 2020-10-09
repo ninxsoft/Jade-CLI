@@ -53,12 +53,12 @@ struct Download {
             exit(1)
         }
 
-        performDownload(downloadLink: downloadLink, type: type, releaseVersion: releaseVersion, platform: platform, output: output)
+        performDownload(downloadLink: downloadLink, type: type, release: release, platform: platform, output: output)
     }
 
-    private static func performDownload(downloadLink: DownloadLink, type: Asset.AssetType, releaseVersion: String, platform: DownloadLink.Platform, output: String) {
+    private static func performDownload(downloadLink: DownloadLink, type: Asset.AssetType, release: Release, platform: DownloadLink.Platform, output: String) {
 
-        print("\nDownloading '\(type.friendlyDescription) version \(releaseVersion) (\(platform.friendlyDescription))'...")
+        print("\nDownloading '\(type.friendlyDescription) version \(release.version) (\(platform.friendlyDescription))'...")
 
         var destination: String = output
 
@@ -69,7 +69,7 @@ struct Download {
         destination += downloadLink.url.filename()
 
         guard let source: String = download(url: downloadLink.url) else {
-            print("\nERROR - There was an error downloading '\(type.friendlyDescription) version \(releaseVersion) (\(platform.friendlyDescription))'.\n")
+            print("\nERROR - There was an error downloading '\(type.friendlyDescription) version \(release.version) (\(platform.friendlyDescription))'.\n")
             exit(1)
         }
 
