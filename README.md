@@ -116,7 +116,7 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 
 ## Version History
 
-*   1.1.1
+*   1.2
     *   Checksums are now validated
     *   Better detection of command line arguments
     *   Code cleanup
