@@ -220,7 +220,7 @@ class HTTP {
             for downloadDictionary in downloadsArray {
 
                 guard let platformString: String = downloadDictionary["type"] as? String,
-                    let platform: DownloadLink.Platform = DownloadLink.Platform(rawValue: platformString),
+                    let platform: DownloadLink.Platform = DownloadLink.Platform(platform: platformString),
                     let url: String = downloadDictionary["url"] as? String,
                     let checksum: String = downloadDictionary["checksum"] as? String else {
                     continue
