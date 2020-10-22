@@ -110,7 +110,6 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 ## Credits / Thank You
 
 *   Project created and maintained by Nindi Gill ([ninxsoft](https://github.com/ninxsoft)).
-*   Kishikawa Katsumi ([kishikawakatsumi](https://github.com/kishikawakatsumi)) for [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess), used to read and update keychain credentials.
 *   Apple ([apple](https://github.com/apple)) for [Swift Argument Parser](https://github.com/apple/swift-argument-parser), used to perform command line argument and flag operations.
 *   Eric Boyd ([@ericjboyd](https://twitter.com/ericjboyd)) for assistance with adding Healthcare Listener.
 
@@ -119,6 +118,7 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 *   1.2.1
     *   Removed [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) dependency
     *   Fixed some download links that would not display / download
+
 *   1.2
     *   Checksums are now validated
     *   Better detection of command line arguments
