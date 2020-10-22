@@ -6,17 +6,13 @@
 //
 
 import Foundation
-import KeychainAccess
 
 struct Credentials {
 
     static var authorization: String? {
 
-        let keychain: Keychain = Keychain(service: .identifier)
-
-        guard let username: String = keychain.allKeys().first,
-            let password: String = keychain[username],
-            let data: Data = "\(username):\(password)".data(using: .utf8) else {
+        guard let credentials: (username: String, password: String) = Keychain.read(),
+            let data: Data = "\(credentials.username):\(credentials.password)".data(using: .utf8) else {
             return nil
         }
 
@@ -53,7 +49,7 @@ struct Credentials {
             password = String(cString: string)
         }
 
-        guard update(username: username, password: password) else {
+        guard Keychain.update(username: username, password: password) else {
             print("\nERROR - There was an error updating credentials in keychain.\n")
             exit(1)
         }
@@ -66,19 +62,5 @@ struct Credentials {
         }
 
         print("\nSuccessfully updated credentials in keychain.\n")
-    }
-
-    static func update(username: String, password: String) -> Bool {
-
-        let keychain: Keychain = Keychain(service: .identifier)
-
-        do {
-            try keychain.removeAll()
-            keychain[username] = password
-            return true
-        } catch {
-            print(error)
-            return false
-        }
     }
 }

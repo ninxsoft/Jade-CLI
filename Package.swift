@@ -12,13 +12,11 @@ let package = Package(
         .executable(name: "jade", targets: ["JADE"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.1"),
-        .package(url: "https://github.com/kishikawakatsumi/KeychainAccess", from: "4.2.1")
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.1")
     ],
     targets: [
         .target(name: "JADE", dependencies: [
-            .product(name: "ArgumentParser", package: "swift-argument-parser"),
-            .product(name: "KeychainAccess", package: "KeychainAccess")
+            .product(name: "ArgumentParser", package: "swift-argument-parser")
         ], path: "JADE")
     ]
 )
