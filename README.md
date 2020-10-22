@@ -116,6 +116,9 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 
 ## Version History
 
+*   1.2.1
+    *   Removed [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) dependency
+    *   Fixed some download links that would not display / download
 *   1.2
     *   Checksums are now validated
     *   Better detection of command line arguments
