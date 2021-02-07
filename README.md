@@ -133,7 +133,7 @@ Grab the latest version of **JADE** from the [releases page](https://github.com/
 
 ## License
 
-    Copyright © 2020 Nindi Gill
+    Copyright © 2021 Nindi Gill
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
