@@ -19,7 +19,7 @@
 		57380E8E252F200A00A32C52 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E79252F1F4100A32C52 /* HTTP.swift */; };
 		57380E90252F200A00A32C52 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7E252F1F4100A32C52 /* Asset.swift */; };
 		57380E92252F201100A32C52 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E80252F1F4100A32C52 /* String+Extension.swift */; };
-		57380EA5252FD50E00A32C52 /* Jade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380EA4252FD50E00A32C52 /* Jade.swift */; };
+		57380EA5252FD50E00A32C52 /* JADE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380EA4252FD50E00A32C52 /* JADE.swift */; };
 		57380EA9252FD55F00A32C52 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 57380EA8252FD55F00A32C52 /* ArgumentParser */; };
 		5746C88B2541092D00A16910 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746C88A2541092D00A16910 /* Keychain.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +50,7 @@
 		57380E7D252F1F4100A32C52 /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
 		57380E7E252F1F4100A32C52 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		57380E80252F1F4100A32C52 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		57380EA4252FD50E00A32C52 /* Jade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade.swift; sourceTree = "<group>"; };
+		57380EA4252FD50E00A32C52 /* JADE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JADE.swift; sourceTree = "<group>"; };
 		5746C88A2541092D00A16910 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				57380E6E252F1EAA00A32C52 /* main.swift */,
-				57380EA4252FD50E00A32C52 /* Jade.swift */,
+				57380EA4252FD50E00A32C52 /* JADE.swift */,
 				571A13DE252FEF30007972E3 /* Credentials.swift */,
 				571A13D2252FED06007972E3 /* List.swift */,
 				57380E78252F1F4100A32C52 /* Download.swift */,
@@ -166,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					57380E6A252F1EAA00A32C52 = {
 						CreatedOnToolsVersion = 12.2;
@@ -223,7 +223,7 @@
 				5726A938253012340002F814 /* Data+Extension.swift in Sources */,
 				57380E92252F201100A32C52 /* String+Extension.swift in Sources */,
 				571A13D6252FED48007972E3 /* Assets.swift in Sources */,
-				57380EA5252FD50E00A32C52 /* Jade.swift in Sources */,
+				57380EA5252FD50E00A32C52 /* JADE.swift in Sources */,
 				571A13DF252FEF30007972E3 /* Credentials.swift in Sources */,
 				571A13D3252FED06007972E3 /* List.swift in Sources */,
 				57380E90252F200A00A32C52 /* Asset.swift in Sources */,
@@ -358,6 +358,7 @@
 		57380E73252F1EAA00A32C52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7K3HVCLV7Z;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -369,6 +370,7 @@
 		57380E74252F1EAA00A32C52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7K3HVCLV7Z;
 				ENABLE_HARDENED_RUNTIME = YES;

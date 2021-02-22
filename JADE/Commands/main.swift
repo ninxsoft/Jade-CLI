@@ -7,5 +7,5 @@
 
 import Foundation
 
-Jade.main()
+JADE.main()
 exit(0)

@@ -1,6 +1,6 @@
 //
 //  Data+Extension.swift
-//  jade
+//  JADE
 //
 //  Created by Nindi Gill on 9/10/20.
 //

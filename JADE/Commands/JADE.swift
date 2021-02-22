@@ -1,5 +1,5 @@
 //
-//  Jade.swift
+//  JADE.swift
 //  JADE
 //
 //  Created by Nindi Gill on 9/10/20.
@@ -16,8 +16,8 @@ struct RuntimeError: Error, CustomStringConvertible {
     }
 }
 
-struct Jade: ParsableCommand {
-    static let configuration: CommandConfiguration = CommandConfiguration(abstract: String.abstract, discussion: String.discussion)
+struct JADE: ParsableCommand {
+    static let configuration: CommandConfiguration = CommandConfiguration(abstract: .abstract, discussion: .discussion)
 
     @Flag(name: .shortAndLong, help: """
     Interactively add / update username
@@ -70,7 +70,7 @@ struct Jade: ParsableCommand {
     """)
     var output: String = NSHomeDirectory() + "/Downloads/"
 
-    @Flag(name: .shortAndLong, help: "Display the version of jade.")
+    @Flag(name: .shortAndLong, help: "Display the version of \(String.appName).")
     var version: Bool = false
 
     mutating func run() throws {
@@ -83,6 +83,9 @@ struct Jade: ParsableCommand {
             Download.run(type: type, releaseVersion: release, platform: platform, output: output)
         } else if version {
             Version.run()
+        } else {
+            let string: String = JADE.helpMessage()
+            print(string)
         }
     }
 }
