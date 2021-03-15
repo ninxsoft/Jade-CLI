@@ -8,6 +8,7 @@ A Mac command-line tool to automate the downloading of your [Jamf Nation](https:
 ## Features
 
 *   [x] List all available Jamf assets for download
+    *   Optionally export list as **JSON**, **Property List** or **YAML**
 
     **Note:** Availability based upon your Jamf Subscription
 
@@ -40,12 +41,17 @@ OVERVIEW: Jamf Asset Downloader Extreme
 
 A Mac command-line tool to automate the downloading of your Jamf Nation assets.
 
-USAGE: jade [--credentials] [--list] [--download] [--type <type>] [--release <release>] [--platform <platform>] [--output <output>] [--version]
+USAGE: jade [--credentials] [--list] [--export <export>] [--format <format>] [--download] [--type <type>] [--release <release>] [--platform <platform>] [--output <output>] [--version]
 
 OPTIONS:
   -c, --credentials       Interactively add / update username
                           and password credentials to keychain.
   -l, --list              List all assets available to download.
+  -e, --export <export>   Optionally export the list to a file.
+  -f, --format <format>   Format of the list to export:
+                          json
+                          plist
+                          yaml
   -d, --download          Download an asset from Jamf Nation.
   -t, --type <type>       Download types (depending on availability):
                           jamf (Jamf Pro Installer)
@@ -80,6 +86,15 @@ jade --credentials
 # List all available Jamf Assets - will vary depending on your Jamf subscription
 jade --list
 
+# List + Export to a JSON file:
+jade --list --export "/path/to/export.json" --format json
+
+# List + Export to a Property List:
+jade --list --export "/path/to/export.plist" --format plist
+
+# List + Export to a YAML file:
+jade --list --export "/path/to/export.yaml" --format yaml
+
 # Download the default asset:
 # Jamf Pro Installer, latest version, Mac
 jade --download
@@ -95,7 +110,7 @@ jade --download --type jamf --platform linux
 
 # Download a particular release version of the Jamf Pro Server Tools
 # for Windows, to a custom directory
-jade --download --type jpst --release 2.7.3 --platform windows --output ~/Desktop
+jade --download --type jpst --release 2.7.3 --platform windows --output "/path/to/custom/directory"
 ```
 
 ## Build Requirements
@@ -105,15 +120,19 @@ jade --download --type jpst --release 2.7.3 --platform windows --output ~/Deskto
 
 ## Download
 
-Grab the latest version of **JADE** from the [releases page](https://github.com/ninxsoft/JADE/releases).
+Grab the latest version of **JADE** from the [releases page](https://github.com/ninxsoft/Jade/releases).
 
 ## Credits / Thank You
 
 *   Project created and maintained by Nindi Gill ([ninxsoft](https://github.com/ninxsoft)).
 *   Apple ([apple](https://github.com/apple)) for [Swift Argument Parser](https://github.com/apple/swift-argument-parser), used to perform command line argument and flag operations.
+*   JP Simard ([@jpsim](https://github.com/jpsim)) for [Yams](https://github.com/jpsim/Yams), used to export YAML.
 *   Eric Boyd ([@ericjboyd](https://twitter.com/ericjboyd)) for assistance with adding Healthcare Listener.
 
 ## Version History
+
+*   1.3
+    *   Added ability to export list as **JSON**, **Property List** or **YAML**
 
 *   1.2.1
     *   Removed [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) dependency
