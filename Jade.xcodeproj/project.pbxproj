@@ -19,9 +19,11 @@
 		57380E8E252F200A00A32C52 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E79252F1F4100A32C52 /* HTTP.swift */; };
 		57380E90252F200A00A32C52 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E7E252F1F4100A32C52 /* Asset.swift */; };
 		57380E92252F201100A32C52 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380E80252F1F4100A32C52 /* String+Extension.swift */; };
-		57380EA5252FD50E00A32C52 /* JADE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380EA4252FD50E00A32C52 /* JADE.swift */; };
+		57380EA5252FD50E00A32C52 /* Jade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57380EA4252FD50E00A32C52 /* Jade.swift */; };
 		57380EA9252FD55F00A32C52 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 57380EA8252FD55F00A32C52 /* ArgumentParser */; };
 		5746C88B2541092D00A16910 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746C88A2541092D00A16910 /* Keychain.swift */; };
+		57550FEF25FF5BA4006C29EE /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 57550FEE25FF5BA4006C29EE /* Yams */; };
+		57550FF525FF5C65006C29EE /* ExportFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57550FF425FF5C65006C29EE /* ExportFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,7 +44,7 @@
 		571A13DA252FEE7D007972E3 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
 		571A13DE252FEF30007972E3 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		5726A937253012340002F814 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
-		57380E6B252F1EAA00A32C52 /* jade */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jade; sourceTree = BUILT_PRODUCTS_DIR; };
+		57380E6B252F1EAA00A32C52 /* Jade */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Jade; sourceTree = BUILT_PRODUCTS_DIR; };
 		57380E6E252F1EAA00A32C52 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		57380E78252F1F4100A32C52 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		57380E79252F1F4100A32C52 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
@@ -50,8 +52,9 @@
 		57380E7D252F1F4100A32C52 /* Release.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Release.swift; sourceTree = "<group>"; };
 		57380E7E252F1F4100A32C52 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		57380E80252F1F4100A32C52 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		57380EA4252FD50E00A32C52 /* JADE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JADE.swift; sourceTree = "<group>"; };
+		57380EA4252FD50E00A32C52 /* Jade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jade.swift; sourceTree = "<group>"; };
 		5746C88A2541092D00A16910 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		57550FF425FF5C65006C29EE /* ExportFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57550FEF25FF5BA4006C29EE /* Yams in Frameworks */,
 				57380EA9252FD55F00A32C52 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +73,7 @@
 		57380E62252F1EAA00A32C52 = {
 			isa = PBXGroup;
 			children = (
-				57380E6D252F1EAA00A32C52 /* JADE */,
+				57380E6D252F1EAA00A32C52 /* Jade */,
 				57380E6C252F1EAA00A32C52 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,12 +81,12 @@
 		57380E6C252F1EAA00A32C52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57380E6B252F1EAA00A32C52 /* jade */,
+				57380E6B252F1EAA00A32C52 /* Jade */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57380E6D252F1EAA00A32C52 /* JADE */ = {
+		57380E6D252F1EAA00A32C52 /* Jade */ = {
 			isa = PBXGroup;
 			children = (
 				57380E9F252FD47400A32C52 /* Commands */,
@@ -90,7 +94,7 @@
 				57380E77252F1F4100A32C52 /* Helpers */,
 				57380E7B252F1F4100A32C52 /* Model */,
 			);
-			path = JADE;
+			path = Jade;
 			sourceTree = "<group>";
 		};
 		57380E77252F1F4100A32C52 /* Helpers */ = {
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				57380E7E252F1F4100A32C52 /* Asset.swift */,
+				57550FF425FF5C65006C29EE /* ExportFormat.swift */,
 				57380E7D252F1F4100A32C52 /* Release.swift */,
 				57380E7C252F1F4100A32C52 /* DownloadLink.swift */,
 			);
@@ -126,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				57380E6E252F1EAA00A32C52 /* main.swift */,
-				57380EA4252FD50E00A32C52 /* JADE.swift */,
+				57380EA4252FD50E00A32C52 /* Jade.swift */,
 				571A13DE252FEF30007972E3 /* Credentials.swift */,
 				571A13D2252FED06007972E3 /* List.swift */,
 				57380E78252F1F4100A32C52 /* Download.swift */,
@@ -138,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57380E6A252F1EAA00A32C52 /* jade */ = {
+		57380E6A252F1EAA00A32C52 /* Jade */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57380E72252F1EAA00A32C52 /* Build configuration list for PBXNativeTarget "jade" */;
+			buildConfigurationList = 57380E72252F1EAA00A32C52 /* Build configuration list for PBXNativeTarget "Jade" */;
 			buildPhases = (
 				57380E67252F1EAA00A32C52 /* Sources */,
 				57380E68252F1EAA00A32C52 /* Frameworks */,
@@ -151,12 +156,13 @@
 			);
 			dependencies = (
 			);
-			name = jade;
+			name = Jade;
 			packageProductDependencies = (
 				57380EA8252FD55F00A32C52 /* ArgumentParser */,
+				57550FEE25FF5BA4006C29EE /* Yams */,
 			);
 			productName = JADE;
-			productReference = 57380E6B252F1EAA00A32C52 /* jade */;
+			productReference = 57380E6B252F1EAA00A32C52 /* Jade */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -173,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57380E66252F1EAA00A32C52 /* Build configuration list for PBXProject "JADE" */;
+			buildConfigurationList = 57380E66252F1EAA00A32C52 /* Build configuration list for PBXProject "Jade" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -184,12 +190,13 @@
 			mainGroup = 57380E62252F1EAA00A32C52;
 			packageReferences = (
 				57380EA7252FD55F00A32C52 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				57550FED25FF5BA4006C29EE /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = 57380E6C252F1EAA00A32C52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57380E6A252F1EAA00A32C52 /* jade */,
+				57380E6A252F1EAA00A32C52 /* Jade */,
 			);
 		};
 /* End PBXProject section */
@@ -223,10 +230,11 @@
 				5726A938253012340002F814 /* Data+Extension.swift in Sources */,
 				57380E92252F201100A32C52 /* String+Extension.swift in Sources */,
 				571A13D6252FED48007972E3 /* Assets.swift in Sources */,
-				57380EA5252FD50E00A32C52 /* JADE.swift in Sources */,
+				57380EA5252FD50E00A32C52 /* Jade.swift in Sources */,
 				571A13DF252FEF30007972E3 /* Credentials.swift in Sources */,
 				571A13D3252FED06007972E3 /* List.swift in Sources */,
 				57380E90252F200A00A32C52 /* Asset.swift in Sources */,
+				57550FF525FF5C65006C29EE /* ExportFormat.swift in Sources */,
 				57380E8E252F200A00A32C52 /* HTTP.swift in Sources */,
 				57380E6F252F1EAA00A32C52 /* main.swift in Sources */,
 				57380E8D252F200A00A32C52 /* DownloadLink.swift in Sources */,
@@ -382,7 +390,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57380E66252F1EAA00A32C52 /* Build configuration list for PBXProject "JADE" */ = {
+		57380E66252F1EAA00A32C52 /* Build configuration list for PBXProject "Jade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57380E70252F1EAA00A32C52 /* Debug */,
@@ -391,7 +399,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57380E72252F1EAA00A32C52 /* Build configuration list for PBXNativeTarget "jade" */ = {
+		57380E72252F1EAA00A32C52 /* Build configuration list for PBXNativeTarget "Jade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57380E73252F1EAA00A32C52 /* Debug */,
@@ -408,7 +416,15 @@
 			repositoryURL = "https://github.com/apple/swift-argument-parser";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.1;
+				minimumVersion = 0.4.1;
+			};
+		};
+		57550FED25FF5BA4006C29EE /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -418,6 +434,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 57380EA7252FD55F00A32C52 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
+		};
+		57550FEE25FF5BA4006C29EE /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57550FED25FF5BA4006C29EE /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,20 +1,48 @@
 //
 //  List.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 9/10/20.
 //
 
 import Foundation
+import Yams
 
 struct List {
 
-    static func run() {
+    static func run(exportPath: String?, format: ExportFormat?) {
 
         guard let assets: [Asset] = Assets.retrieve() else {
             exit(1)
         }
 
+        list(assets)
+
+        guard let path: String = exportPath else {
+            return
+        }
+
+        guard !path.isEmpty else {
+            print("Export path is missing.")
+            return
+        }
+
+        guard let format: ExportFormat = format else {
+            print("Export format is missing.")
+            return
+        }
+
+        switch format {
+        case .json:
+            saveJSON(path, using: assets)
+        case .propertyList:
+            savePropertyList(path, using: assets)
+        case .yaml:
+            saveYAML(path, using: assets)
+        }
+    }
+
+    private static func list(_ assets: [Asset]) {
         let border: String.Color = .cyan
         let heading: String.Color = .white
         let pipe: String = "│".color(border)
@@ -112,5 +140,53 @@ struct List {
         }
 
         return max
+    }
+
+    private static func saveJSON(_ path: String, using assets: [Asset]) {
+        let dictionaries: [[String: Any]] = assets.map { $0.dictionary }
+
+        do {
+            let data: Data = try JSONSerialization.data(withJSONObject: dictionaries, options: .prettyPrinted)
+
+            guard let string: String = String(data: data, encoding: .utf8) else {
+                print("ERROR - Invalid data.")
+                return
+            }
+
+            try string.write(toFile: path, atomically: true, encoding: .utf8)
+            print("Saved list as JSON: '\(path)'")
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+    private static func savePropertyList(_ path: String, using assets: [Asset]) {
+        let dictionaries: [[String: Any]] = assets.map { $0.dictionary }
+
+        do {
+            let data: Data = try PropertyListSerialization.data(fromPropertyList: dictionaries, format: .xml, options: .bitWidth)
+
+            guard let string: String = String(data: data, encoding: .utf8) else {
+                print("ERROR - Invalid data.")
+                return
+            }
+
+            try string.write(toFile: path, atomically: true, encoding: .utf8)
+            print("Saved list as Property List: '\(path)'")
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+    private static func saveYAML(_ path: String, using assets: [Asset]) {
+        let dictionaries: [[String: Any]] = assets.map { $0.dictionary }
+
+        do {
+            let string: String = try Yams.dump(object: dictionaries)
+            try string.write(toFile: path, atomically: true, encoding: .utf8)
+            print("Saved list as YAML: '\(path)'")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

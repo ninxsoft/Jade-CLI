@@ -1,6 +1,6 @@
 //
 //  Download.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 4/10/20.
 //

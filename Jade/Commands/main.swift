@@ -1,11 +1,11 @@
 //
 //  main.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 3/10/20.
 //
 
 import Foundation
 
-JADE.main()
+Jade.main()
 exit(0)

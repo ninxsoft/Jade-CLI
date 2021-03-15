@@ -1,6 +1,6 @@
 //
 //  Keychain.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 22/10/20.
 //
