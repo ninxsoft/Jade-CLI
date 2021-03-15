@@ -1,6 +1,6 @@
 //
-//  JADE.swift
-//  JADE
+//  Jade.swift
+//  Jade
 //
 //  Created by Nindi Gill on 9/10/20.
 //
@@ -16,7 +16,7 @@ struct RuntimeError: Error, CustomStringConvertible {
     }
 }
 
-struct JADE: ParsableCommand {
+struct Jade: ParsableCommand {
     static let configuration: CommandConfiguration = CommandConfiguration(abstract: .abstract, discussion: .discussion)
 
     @Flag(name: .shortAndLong, help: """
@@ -29,6 +29,19 @@ struct JADE: ParsableCommand {
     List all assets available to download.
     """)
     var list: Bool = false
+
+    @Option(name: .shortAndLong, help: """
+    Optionally export the list to a file.
+    """)
+    var export: String?
+
+    @Option(name: .shortAndLong, help: """
+    Format of the list to export:
+    json
+    plist
+    yaml
+    """)
+    var format: ExportFormat?
 
     @Flag(name: .shortAndLong, help: """
     Download an asset from Jamf Nation.
@@ -78,14 +91,13 @@ struct JADE: ParsableCommand {
         if credentials {
             Credentials.run()
         } else if list {
-            List.run()
+            List.run(exportPath: export, format: format)
         } else if download {
             Download.run(type: type, releaseVersion: release, platform: platform, output: output)
         } else if version {
             Version.run()
         } else {
-            let string: String = JADE.helpMessage()
-            print(string)
+            print(Jade.helpMessage())
         }
     }
 }

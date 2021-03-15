@@ -1,6 +1,6 @@
 //
 //  Asset.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 3/10/20.
 //
@@ -8,9 +8,9 @@
 import ArgumentParser
 import Foundation
 
-struct Asset {
+struct Asset: Codable {
 
-    enum AssetType: String, CaseIterable, ExpressibleByArgument {
+    enum AssetType: String, Codable, CaseIterable, ExpressibleByArgument {
         case jamf = "jamf"
         case adcs = "adcs"
         case jim = "jim"
@@ -121,4 +121,10 @@ struct Asset {
 
     let type: AssetType
     let releases: [Release]
+    var dictionary: [String: Any] {
+        [
+            "type": type.description,
+            "releases": releases.map { $0.dictionary }
+        ]
+    }
 }

@@ -1,6 +1,6 @@
 //
 //  Assets.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 9/10/20.
 //

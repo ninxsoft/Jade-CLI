@@ -498,6 +498,21 @@
 			<key>VERSION</key>
 			<integer>5</integer>
 		</dict>
+		<key>PACKAGE_SCRIPTS</key>
+		<dict>
+			<key>POSTINSTALL_PATH</key>
+			<dict>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
+			<key>PREINSTALL_PATH</key>
+			<dict>
+				<key>PATH_TYPE</key>
+				<integer>1</integer>
+			</dict>
+			<key>RESOURCES</key>
+			<array/>
+		</dict>
 		<key>PACKAGE_SETTINGS</key>
 		<dict>
 			<key>AUTHENTICATION</key>
@@ -507,7 +522,7 @@
 			<key>FOLLOW_SYMBOLIC_LINKS</key>
 			<false/>
 			<key>IDENTIFIER</key>
-			<string>com.ninxsoft.pkg.JADE</string>
+			<string>com.ninxsoft.pkg.jade</string>
 			<key>LOCATION</key>
 			<integer>0</integer>
 			<key>NAME</key>
@@ -523,7 +538,7 @@
 			<key>USE_HFS+_COMPRESSION</key>
 			<false/>
 			<key>VERSION</key>
-			<string>1.2.1</string>
+			<string>1.3</string>
 		</dict>
 		<key>PROJECT_COMMENTS</key>
 		<dict>
@@ -716,7 +731,7 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>JADE 1.2.1</string>
+			<string>Jade 1.3</string>
 			<key>PAYLOAD_ONLY</key>
 			<false/>
 		</dict>

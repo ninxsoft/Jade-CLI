@@ -12,11 +12,13 @@ let package = Package(
         .executable(name: "jade", targets: ["JADE"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.1")
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.1"),
+        .package(url: "https://github.com/jpsim/Yams", from: "4.0.4")
     ],
     targets: [
         .target(name: "JADE", dependencies: [
-            .product(name: "ArgumentParser", package: "swift-argument-parser")
+            .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            .product(name: "Yams", package: "Yams")
         ], path: "JADE")
     ]
 )

@@ -1,6 +1,6 @@
 //
 //  DownloadLink.swift
-//  JADE
+//  Jade
 //
 //  Created by Nindi Gill on 4/10/20.
 //
@@ -8,7 +8,7 @@
 import ArgumentParser
 import Foundation
 
-struct DownloadLink {
+struct DownloadLink: Codable {
 
     enum Platform: String, Codable, ExpressibleByArgument {
         // swiftlint:disable redundant_string_enum_value
@@ -80,4 +80,11 @@ struct DownloadLink {
     let platform: Platform
     let url: String
     let checksum: String
+    var dictionary: [String: Any] {
+        [
+            "platform": platform.description,
+            "url": url,
+            "checksum": checksum
+        ]
+    }
 }
